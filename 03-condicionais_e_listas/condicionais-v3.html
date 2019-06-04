@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Condicionais v2</title>
+    <title>Condicionais v3</title>
 </head>
 <body >
     <div id='app'>
-        <p v-if="logado">Usuário logado: {{nome}}</p>
+        <template v-if="logado">
+            <p >Usuário logado: {{nome}}</p>
+            <p>Perfil Admin</p>
+        </template>
+        
         <p v-else-if="anonimo">Logado como anonimo</p>
         <p v-if='!logado'>Nenhum usuário logado</p>
         <button @click='logado = !logado'>{{ logado ? 'Sair' : 'Entrar'}}</button>

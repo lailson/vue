@@ -5,7 +5,6 @@ new Vue({
     },
     computed: {
         resultado() {
-            console.log('oi')
             return this.valor == 37 ? 'Valor Igual' : 'Valor Diferente'
         }
     },

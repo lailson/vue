@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Listas</title>
+</head>
+<body >
+    <div id='app'>
+        <ul>
+            <li v-for="(cor, i) in cores">{{ cor }} - {{ i }}</li>
+        </ul>
+        <hr>
+        <template v-for="(cor, i) in cores">
+            <h1>{{cor}}</h1>
+            <p>{{i}}</p>
+        </template>
+        <hr>
+        <ul>
+            <li v-for="pessoa in pessoas">
+                {{pessoa.nome}}
+            </li>
+            <hr>
+            <li v-for="pessoa in pessoas">
+                <div v-for="(chave, valor, indice) in pessoa">
+                    {{indice}} - {{chave}} = {{valor}}
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>   
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+           cores : ['vermelho', 'amarelo', 'azul'],
+           pessoas: [
+               {nome: 'Lailson', idade: 18, peso: 80},
+               {nome: 'henrique', idade: 25, peso: 90},
+           ]
+        }
+    })
+</script>
