@@ -1,0 +1,18 @@
+#Instalar Node
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install -y nodejs
+
+#Instalando 
+sudo npm install -g @vue/cli
+
+#Criando o priemiro projeto
+vue create projeto-simples
+cd projeto-simples
+npm run serve
+#Instalando as dependencias (node-modules)
+npm install 
