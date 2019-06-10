@@ -16,3 +16,17 @@ cd projeto-simples
 npm run serve
 #Instalando as dependencias (node-modules)
 npm install 
+
+
+#Fazendo o build -> Gera a pasta dist
+npm run build
+
+#Projeto com plugins 
+vue create projeto-plugins
+vue add electron-builder // ou yarn add electron-builder
+npm run electron:serve
+
+#Ferramenta para depurar projetos vue
+https://github.com/vuejs/vue-devtools
+
+

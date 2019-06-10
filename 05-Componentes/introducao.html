@@ -1,0 +1,68 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<!-- CONTADOR SEM COMPONENTE -->
+<div id="app">
+    <span>{{contador}}</span>
+    <button @click="contador++">soma1</button>
+    <button @click="contador--">subtrai1</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0
+        }
+    })
+</script>
+
+<!-- como ficaria o código caso quisessemos utilizar dois contadores??? -->
+<!-- Utilizando classe daria erro, só iria renderizar a primeira instÂncia -->
+<!-- <div class="app">
+        <span>{{contador}}</span>
+        <button @click="contador++">soma1</button>
+        <button @click="contador--">subtrai1</button>
+    </div>
+    <div class="app">
+            <span>{{contador}}</span>
+            <button @click="contador++">soma1</button>
+            <button @click="contador--">subtrai1</button>
+        </div>
+    
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                contador: 0
+            }
+        })
+    </script> 
+-->
+   
+<!-- Então podemos criar um componente de forma global -->
+<!-- <div id="app">
+    <contador></contador>
+    <contador></contador>
+</div>
+
+<script>
+    Vue.component('contador', {
+        template: `
+        <div>
+            <span>{{contador}}</span>
+            <button @click="contador++">soma1</button>
+            <button @click="contador--">subtrai1</button>
+        </div>
+        `,
+        data() {
+            return {
+                contador: 0
+            }
+        }
+    })
+
+    new Vue({
+        el: '#app'
+    })
+</script> -->
