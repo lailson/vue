@@ -1,0 +1,5 @@
+#Criando o projeto
+vue create componente-intro //Seleciona o template default
+cd componente-intro
+npm run serve
+

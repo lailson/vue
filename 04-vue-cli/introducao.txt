@@ -29,6 +29,7 @@ npm run build
 vue create projeto-plugins
 vue add electron-builder // ou yarn add electron-builder
 npm run electron:serve
+npm run electron:build
 
 #Ferramenta para depurar projetos vue
 https://github.com/vuejs/vue-devtools
