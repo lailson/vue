@@ -2,12 +2,13 @@
     <div class="componente">
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
+        <p>idade do usuário: {{idade}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: ['idade']   
 }
 </script>
 
